@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Check PII in Logs</title>
+<style>
+* {
+  box-sizing: border-box; 
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+#main {
+  display: flex;
+  flex: 1;
+}
+#main > article {
+  flex: 1;
+}
+#main > nav, 
+#main > aside {
+  flex: 0 0 20vw;
+  background: beige;
+}
+#main > nav {
+  order: -1;
+}
+header, footer {
+  background: yellowgreen;
+  height: 20vh;
+}
+header, footer, article, nav, aside {
+  padding: 1em;
+}
+</style>
+</head>
+<body>
+  <header><H1>CHECK PII IN LOGS</H1></header>
+  <div id="main">
+    <article><H4>Gather logs in form of a txt file and submit it.</H4><br/><form method="POST" action="/analyzeFile" enctype="multipart/form-data">
+<input name="file" type="file"/><button type="submit">Submit</button>
+</form></article>
+    <nav>Sensitive info like names of persons dates telephone numbers are classified as PII personally identifiable info Using NLP we can try to fetch the pii from log files.</nav>
+    <aside>Hackers search for PII info in logs to break into system. As in todays world there are distributed logs and out of enterprise in cloud</aside>
+  </div>
+  <footer><H3><i>Vijay Anirudh</i></H3></footer>
